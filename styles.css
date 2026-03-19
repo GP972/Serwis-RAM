@@ -272,17 +272,20 @@ nav ul li a:hover {
 /* treść */
 .container-fluid {
   padding: 8rem 15%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 4rem;
 }
 
 .content-card {
   background: var(--glass);
   padding: 4.5rem;
-  margin-bottom: 5rem;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
 }
-
 .content-card:hover {
   background: var(--glass-hover);
   transform: translateY(-8px);
@@ -290,13 +293,14 @@ nav ul li a:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.container-fluid h2 {
+.content-card h2 {
   font-size: 3.5rem;
   margin-bottom: 2.5rem;
   color: var(--accent-color);
   display: inline-block;
   border-bottom: 2px solid var(--accent-color);
   padding-bottom: 8px;
+  align-self: flex-start;
 }
 
 .container-fluid p {
@@ -324,9 +328,11 @@ footer {
   opacity: 0.4;
 }
 
+/* mediaquerry siatki na mniejsze telefony */
 @media (max-width: 768px) {
   .container-fluid {
     padding: 4rem 6%;
+    grid-template-columns: 1fr;
   }
   .slide-content {
     width: 92%;
