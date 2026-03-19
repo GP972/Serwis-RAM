@@ -1,0 +1,343 @@
+:root {
+  --main-bg: #0a0a0a;
+  --text-color: #f0f0f0;
+  --accent-color: #3498db;
+  --accent-glow: rgba(52, 152, 219, 0.5);
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-hover: rgba(255, 255, 255, 0.08);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+  border: 2px solid #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  font-family: "Segoe UI", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* nagłówek */
+header {
+  padding: 3rem 5%;
+  background: linear-gradient(to bottom, #111, transparent);
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  animation: titler 1.2s ease-out forwards;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
+}
+
+/* link do maila */
+.badge {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.4rem 1.4rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.mail-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* tło kółka */
+.emailbox {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--glass);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+/* prostokąt koperty */
+.emailbox::before {
+  content: "";
+  width: 16px;
+  height: 10px;
+  border: 2px solid var(--accent-color);
+  border-radius: 2px;
+  position: absolute;
+}
+
+/* trójkąt klapki */
+.emailbox::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  transform: rotate(-45deg);
+  top: 4px;
+}
+
+/* hover */
+.mail-link:hover .emailbox {
+  background: var(--glass-hover);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.user-link {
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.user-link:hover {
+  color: var(--accent-color) !important;
+  text-shadow: 0 0 10px var(--accent-glow);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.hoverimage {
+  filter: drop-shadow(0 0 10px rgba(52, 152, 219, 0.2));
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hoverimage:hover {
+  transform: scale(1.05) rotate(-1deg);
+  filter: drop-shadow(0 0 20px var(--accent-color));
+}
+
+@keyframes titler {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* nawigacja */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 5rem;
+}
+
+nav ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.3s;
+  letter-spacing: 1.5px;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 12px var(--accent-glow);
+}
+
+/* slider */
+.slider {
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  animation: sliding 25s infinite ease-in-out;
+}
+
+.slide {
+  width: 20%;
+  height: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35);
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  padding: 3.5rem;
+  border-radius: 12px;
+  max-width: 600px;
+  border-left: 6px solid var(--accent-color);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.slide-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
+.slide-content p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #eee;
+}
+
+@keyframes sliding {
+  0%,
+  15% {
+    transform: translateX(0);
+  }
+  20%,
+  35% {
+    transform: translateX(-20%);
+  }
+  40%,
+  55% {
+    transform: translateX(-40%);
+  }
+  60%,
+  75% {
+    transform: translateX(-60%);
+  }
+  80%,
+  95% {
+    transform: translateX(-80%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* treść */
+.container-fluid {
+  padding: 8rem 15%;
+}
+
+.content-card {
+  background: var(--glass);
+  padding: 4.5rem;
+  margin-bottom: 5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content-card:hover {
+  background: var(--glass-hover);
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.container-fluid h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--accent-color);
+  display: inline-block;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+}
+
+.container-fluid p {
+  font-size: 1.8rem;
+  line-height: 1.9;
+  color: #ccc;
+}
+
+strong {
+  color: var(--accent-color);
+}
+
+footer {
+  text-align: center;
+  padding: 6rem;
+  color: #555;
+  font-size: 1.3rem;
+}
+
+.footer-line {
+  width: 80px;
+  height: 2px;
+  background: var(--accent-color);
+  margin: 0 auto 2.5rem;
+  opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 4rem 6%;
+  }
+  .slide-content {
+    width: 92%;
+    left: 4%;
+    bottom: 10%;
+    padding: 2.5rem;
+  }
+  nav ul {
+    gap: 2rem;
+  }
+  nav ul li a {
+    font-size: 1.2rem;
+  }
+}
