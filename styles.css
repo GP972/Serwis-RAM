@@ -586,4 +586,13 @@ footer {
     width: 80%;
     text-align: center;
   }
+
+  .games-slider::before,
+  .games-slider::after {
+    width: 40px;
+  }
+  
+  .games-title {
+    font-size: 2.5rem;
+  }
 }
