@@ -383,22 +383,125 @@ footer {
   transform: translateY(-3px);
 }
 
+/* na smartfony */
+.hoverimage img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* socjale */
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: var(--glass);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hovermarks */
+.social-icon.steam:hover {
+  background: #171a21;
+  color: #fff;
+  box-shadow: 0 0 20px #171a21;
+  border-color: #171a21;
+  transform: translateY(-5px);
+}
+.social-icon.facebook:hover {
+  background: #1877f2;
+  color: #fff;
+  box-shadow: 0 0 20px #1877f2;
+  border-color: #1877f2;
+  transform: translateY(-5px);
+}
+.social-icon.youtube:hover {
+  background: #ff0000;
+  color: #fff;
+  box-shadow: 0 0 20px #ff0000;
+  border-color: #ff0000;
+  transform: translateY(-5px);
+}
+
 /* mediaquerry siatki na mniejsze telefony */
 @media (max-width: 768px) {
+  /* logo i nagłówek */
+  header ul {
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  
+  .contact-info {
+    align-items: center; /* Wyśrodkowanie danych ucznia na tel. */
+  }
+
+  /* nawigacja */
+  nav ul {
+    gap: 1.5rem;
+    flex-wrap: wrap; 
+    padding: 0 1.5rem;
+  }
+  
+  nav ul li a {
+    font-size: 1.3rem;
+  }
+
+  /* slider */
+  .slide-content {
+    width: 90%;
+    left: 5%;
+    bottom: 5%;
+    padding: 2rem;
+  }
+  
+  .slide-content h2 {
+    font-size: 2.2rem;
+  }
+  
+  .slide-content p {
+    font-size: 1.4rem;
+  }
+
+  /* Karty i treść */
   .container-fluid {
-    padding: 4rem 6%;
+    padding: 4rem 5%;
     grid-template-columns: 1fr;
   }
-  .slide-content {
-    width: 92%;
-    left: 4%;
-    bottom: 10%;
+  
+  .content-card {
     padding: 2.5rem;
   }
-  nav ul {
-    gap: 2rem;
+  
+  .content-card h2 {
+    font-size: 2.8rem;
   }
-  nav ul li a {
-    font-size: 1.2rem;
+  
+  .container-fluid p {
+    font-size: 1.6rem;
+  }
+
+  /* footer przyciski */
+  .footer-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-btn {
+    width: 80%;
+    text-align: center;
   }
 }
