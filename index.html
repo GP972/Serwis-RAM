@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Strona na lekcji Informatyki">
-    <meta name="keywords" content="HTML, CSS">
+    <meta name="keywords" content="HTML, CSS, Serwis PC, Jasło">
     <meta name="author" content="Michał Hendzel">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,7 +20,7 @@
                     <ul>
                         <li>
                             <div class="hoverimage">
-                                <a href="#"><img src="./ram.webp" width="600" height="110" alt="Serwis RAM Logo" onerror="this.src='https://via.placeholder.com/250x50/3498db/ffffff?text=SERWIS+RAM'"></a>
+                                <a href="#"><img src="./ram.webp" fetchpriority="high" width="600" height="110" alt="Serwis RAM Logo" onerror="this.src='https://via.placeholder.com/250x50/3498db/ffffff?text=SERWIS+RAM'"></a>
                             </div>
                         </li>
                         <li class="contact-info">
@@ -48,35 +48,35 @@
         <div class="slider">
             <div class="slider-track">
             <div class="slide">
-                <a><img src="./slider/slide1.webp" alt="Slide 1"></a>
+                <a><img src="./slider/slide1.webp" fetchpriority="high" alt="Slide 1"></a>
                     <div class="slide-content">
                         <h2>Najlepszy serwis w mieście</h2>
                         <p>Naprawiamy to, czego inni się boją.</p>
                     </div>
             </div>
             <div class="slide">
-                <img src="./slider/slide2.webp" alt="Slide 2">
+                <img src="./slider/slide2.webp" loading="lazy" alt="Slide 2">
                     <div class="slide-content">
                         <h2>Innowacje w zakresie technologii</h2>
                         <p>Stawiamy na nowoczesność.</p>
                     </div>
             </div>
             <div class="slide">
-                <img src="./slider/slide3.webp" alt="Slide 3">
+                <img src="./slider/slide3.webp" loading="lazy" alt="Slide 3">
                     <div class="slide-content">
                         <h2>Przyjazna atmosfera</h2>
                         <p>Każdy staje się częścią w naprawie sprzętu.</p>
                     </div>
             </div>
             <div class="slide">
-                <img src="./slider/slide4.webp" alt="Slide 4">
+                <img src="./slider/slide4.webp" loading="lazy" alt="Slide 4">
                     <div class="slide-content">
                         <h2>Najlepsi profesjonaliści</h2>
                         <p>Gwarantujemy zwrot i zadowolenie klienta.</p>
                     </div>
             </div>
             <div class="slide">
-                <img src="./slider/slide5.webp" alt="Slide 5">
+                <img src="./slider/slide5.webp" loading="lazy" alt="Slide 5">
                     <div class="slide-content">
                         <h2>Światowej klasy partnerzy</h2>
                         <p>Najlepsi sponsorzy, którzy mają zaufanie wśród milionów na świecie.</p>
@@ -87,38 +87,43 @@
         <main class="container-fluid">
             <section id="ja" class="content-card">
                 <h2>O mnie</h2>
-                <img src="./founder.webp" alt="Zdjęcie o mnie" class="card-img">
+                <img src="./founder.webp" alt="Zdjęcie o mnie" class="card-img" loading="lazy">
                 <p>Nazywam się Michał Hendzel i pewnie się zastanawiasz, czemu jesteś dokładnie tutaj na tej stronce.</p>
                 <p>Otóż jestem pasjonatem informatyki, który każdą wolną chwilę poświęca na zgłębianie tajników budowy komputerów. Fascynuje mnie to, jak z tysięcy drobnych części powstaje maszyna zdolna do niesamowitych obliczeń. Moim celem jest połączenie technicznej wiedzy z kreatywnym podejściem do rozwiązywania problemów.</p>
             </section>
+            
             <section id="gry" class="content-card">
                 <h2>Gry</h2>
-                <img src="./Games.webp" alt="Gry" class="card-img">
-                <p>W świecie cyfrowej rozrywki szukam przede wszystkim atmosfery. Moim ulubionym gatunkiem są <strong>horrory</strong> – uwielbiam ten specyficzny dreszcz emocji i mroczny klimat, który potrafi wciągnąć na długie godziny. Cenię gry, które nie tylko straszą "jumpscare'ami", ale budują napięcie poprzez historię i oprawę dźwiękową.</p>
-                <p>Równie ważne są dla mnie produkcje typu <strong>Open-World</strong>. Wolność eksploracji i możliwość odkrywania sekretów ukrytych przez twórców to dla mnie najlepsza forma relaksu po ciężkim dniu w szkole.</p>
+                <img src="./Games.webp" alt="Gry" class="card-img" loading="lazy">
+                <p>W świecie cyfrowej rozrywki szukam przede wszystkim atmosfery...</p>
+                <p>Równie ważne są dla mnie produkcje typu <strong>Open-World</strong>...</p>
             </section>
+            
             <section id="surfing" class="content-card">
                 <h2>Surfing</h2>
-                <img src="./surfingneta.webp" alt="Surfing" class="card-img">
-                <p>Surfing po sieci to dla mnie coś więcej niż przeglądanie mediów społecznościowych. To nieustanne poszukiwanie inspiracji i wiedzy. Często zagłębiam się w fora technologiczne, czytam o historii systemów operacyjnych i śledzę nowinki ze świata hardware'u.</p>
-                <p>Interesuję się również szeroko pojętym designem stron internetowych, co staram się wdrażać w moich projektach szkolnych, takich jak ten.</p>
+                <img src="./surfingneta.webp" alt="Surfing" class="card-img" loading="lazy">
+                <p>Surfing po sieci to dla mnie coś więcej niż przeglądanie mediów...</p>
+                <p>Interesuję się również szeroko pojętym designem stron...</p>
             </section>
+            
             <section id="edu" class="content-card">
                 <h2>Edu</h2>
-                <img src="./Edu.webp" alt="Edukacja" class="card-img">
-                <p>Moja obecna ścieżka edukacyjna prowadzi przez <strong>Zespół Szkół Technicznych w Jaśle</strong>. Wybrałem tę szkołę, ponieważ pozwala mi ona łączyć pasję do komputerów z nauką zawodu, który ma przyszłość.</p>
-                <p>W ZST Jasło uczę się nie tylko teorii, ale przede wszystkim praktyki – od montażu podzespołów po konfigurację sieci. To tutaj buduję fundamenty pod moją przyszłą karierę w branży IT.</p>
+                <img src="./Edu.webp" alt="Edukacja" class="card-img" loading="lazy">
+                <p>Moja obecna ścieżka edukacyjna prowadzi przez <strong>Zespół Szkół Technicznych w Jaśle</strong>...</p>
+                <p>W ZST Jasło uczę się nie tylko teorii, ale przede wszystkim praktyki...</p>
             </section>
+            
             <section id="pc" class="content-card">
                 <h2>PC</h2>
-                <img src="./PC.webp" alt="Sprzęt PC" class="card-img">
-                <p>Składanie i serwisowanie sprzętu to moja najmocniejsza strona. Dobieram podzespoły tak, aby wyciągnąć maksimum wydajności w określonym budżecie. Niestraszne mi systemy chłodzenia wodnego, skomplikowany cable management czy overclocking.</p>
+                <img src="./PC.webp" alt="Sprzęt PC" class="card-img" loading="lazy">
+                <p>Składanie i serwisowanie sprzętu to moja najmocniejsza strona...</p>
                 <p>Moje specyfikacje PC:<br>
                 AMD Ryzen 7 5800H<br>
                 NVIDIA GeForce GTX 1650<br>
                 16 GB RAM<br>
                 Windows 11 Pro</p>
             </section>
+            
             <section id="kontakt" class="content-card">
                 <h2>Kontakt</h2>
                 <p>Masz problem ze sprzętem? Chcesz złożyć wymarzony komputer do gier lub pracy? Daj znać, a na pewno coś wymyślimy!</p>
@@ -134,16 +139,17 @@
             <h2 class="games-title">W co gram po godzinach?</h2>
             <div class="games-slider">
                 <div class="games-track">
-                    <div class="game-item"><img src="./gameslider/Game1.webp" alt="Gra 1"></div>
-                    <div class="game-item"><img src="./gameslider/Game2.webp" alt="Gra 2"></div>
-                    <div class="game-item"><img src="./gameslider/Game3.webp" alt="Gra 3"></div>
-                    <div class="game-item"><img src="./gameslider/Game4.webp" alt="Gra 4"></div>
-                    <div class="game-item"><img src="./gameslider/Game5.webp" alt="Gra 5"></div>
-                    <div class="game-item"><img src="./gameslider/Game1.webp" alt="Gra 1"></div>
-                    <div class="game-item"><img src="./gameslider/Game2.webp" alt="Gra 2"></div>
-                    <div class="game-item"><img src="./gameslider/Game3.webp" alt="Gra 3"></div>
-                    <div class="game-item"><img src="./gameslider/Game4.webp" alt="Gra 4"></div>
-                    <div class="game-item"><img src="./gameslider/Game5.webp" alt="Gra 5"></div>
+                    <div class="game-item"><img src="./gameslider/Game1.webp" loading="lazy" alt="Gra 1"></div>
+                    <div class="game-item"><img src="./gameslider/Game2.webp" loading="lazy" alt="Gra 2"></div>
+                    <div class="game-item"><img src="./gameslider/Game3.webp" loading="lazy" alt="Gra 3"></div>
+                    <div class="game-item"><img src="./gameslider/Game4.webp" loading="lazy" alt="Gra 4"></div>
+                    <div class="game-item"><img src="./gameslider/Game5.webp" loading="lazy" alt="Gra 5"></div>
+                    
+                    <div class="game-item"><img src="./gameslider/Game1.webp" loading="lazy" alt="Gra 1"></div>
+                    <div class="game-item"><img src="./gameslider/Game2.webp" loading="lazy" alt="Gra 2"></div>
+                    <div class="game-item"><img src="./gameslider/Game3.webp" loading="lazy" alt="Gra 3"></div>
+                    <div class="game-item"><img src="./gameslider/Game4.webp" loading="lazy" alt="Gra 4"></div>
+                    <div class="game-item"><img src="./gameslider/Game5.webp" loading="lazy" alt="Gra 5"></div>
                 </div>
             </div>
         </div>
