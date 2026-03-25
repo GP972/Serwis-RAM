@@ -62,11 +62,11 @@ header ul {
 /* link do maila */
 .badge {
   background: var(--accent-color);
-  color: white;
+  color: #0a0a0a; 
   padding: 0.8rem 1.6rem;
   border-radius: 2rem;
   font-size: 1.3rem;
-  font-weight: bold;
+  font-weight: 800;
   letter-spacing: 0.5px;
 }
 
