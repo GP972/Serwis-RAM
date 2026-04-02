@@ -244,29 +244,12 @@ nav ul li a:hover {
 }
 
 @keyframes sliding {
-  0%,
-  15% {
-    transform: translateX(0);
-  }
-  20%,
-  35% {
-    transform: translateX(-20%);
-  }
-  40%,
-  55% {
-    transform: translateX(-40%);
-  }
-  60%,
-  75% {
-    transform: translateX(-60%);
-  }
-  80%,
-  95% {
-    transform: translateX(-80%);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0%, 15% { transform: translateX(0); }
+  20%, 35% { transform: translateX(-20%); }
+  40%, 55% { transform: translateX(-40%); }
+  60%, 75% { transform: translateX(-60%); }
+  80%, 95% { transform: translateX(-80%); }
+  100% { transform: translateX(0); }
 }
 
 /* treść */
@@ -286,6 +269,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
 }
+
 .content-card:hover {
   background: var(--glass-hover);
   transform: translateY(-8px);
@@ -359,7 +343,7 @@ footer {
   justify-content: center;
   gap: 2rem;
   margin-bottom: 3rem;
-  flex-wrap: wrap; /* Pozwala przyciskom zejść do nowej linii na bardzo małych telefonach */
+  flex-wrap: wrap;
 }
 
 .footer-btn {
@@ -412,7 +396,6 @@ footer {
   transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Hovermarks */
 .social-icon.steam:hover {
   background: #171a21;
   color: #fff;
@@ -494,39 +477,28 @@ footer {
 }
 
 @keyframes scrollGames {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-380px * 5)); 
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-380px * 5)); }
 }
 
-/* mediaquerry siatki na mniejsze telefony */
+/* mediaquerry */
 @media (max-width: 768px) {
-  /* logo i nagłówek */
   header ul {
     flex-direction: column;
     gap: 2.5rem;
     text-align: center;
   }
   
-  .contact-info {
-    align-items: center; /* Wyśrodkowanie danych ucznia na tel. */
-  }
+  .contact-info { align-items: center; }
 
-  /* nawigacja */
   nav ul {
     gap: 1.5rem;
     flex-wrap: wrap; 
     padding: 0 1.5rem;
   }
   
-  nav ul li a {
-    font-size: 1.3rem;
-  }
+  nav ul li a { font-size: 1.3rem; }
 
-  /* slider */
   .slide-content {
     width: 90%;
     left: 5%;
@@ -534,50 +506,24 @@ footer {
     padding: 2rem;
   }
   
-  .slide-content h2 {
-    font-size: 2.2rem;
-  }
-  
-  .slide-content p {
-    font-size: 1.4rem;
-  }
+  .slide-content h2 { font-size: 2.2rem; }
+  .slide-content p { font-size: 1.4rem; }
 
-  /* Karty i treść */
   .container-fluid {
     padding: 4rem 5%;
     grid-template-columns: 1fr;
   }
   
-  .content-card {
-    padding: 2.5rem;
-  }
-  
-  .content-card h2 {
-    font-size: 2.8rem;
-  }
-  
-  .container-fluid p {
-    font-size: 1.6rem;
-  }
+  .content-card { padding: 2.5rem; }
+  .content-card h2 { font-size: 2.8rem; }
+  .container-fluid p { font-size: 1.6rem; }
 
-  /* footer przyciski */
   .footer-buttons {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
   }
   
-  .footer-btn {
-    width: 80%;
-    text-align: center;
-  }
-
-  .games-slider::before,
-  .games-slider::after {
-    width: 40px;
-  }
-  
-  .games-title {
-    font-size: 2.5rem;
-  }
+  .footer-btn { width: 80%; text-align: center; }
+  .games-title { font-size: 2.5rem; }
 }
